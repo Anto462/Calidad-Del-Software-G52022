@@ -21,20 +21,20 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class Selenium {
     public static void main(String[] args) throws MalformedURLException, InterruptedException {
 System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver.exe");  
+By usernamelocator = By.id("username");
+By paswordlocator = By.id("password");
+By loginlocator = By.name("login");
 
 WebDriver driver = new ChromeDriver(); 
-  driver.get("http://www.google.com/");    
+  driver.get("http://localhost:82/login");    
 
-  Thread.sleep(5000);  // Let the user actually see something!     
+  Thread.sleep(1000);   
 
-  WebElement searchBox = driver.findElement(By.name("q"));
+   driver.findElement(usernamelocator).sendKeys("alejandro");
+   driver.findElement(paswordlocator).sendKeys("123");
+   driver.findElement(loginlocator).click();
 
-  searchBox.sendKeys("ChromeDriver");     
-
-  searchBox.submit();    
-
-  Thread.sleep(5000);  // Let the user actually see something!     
-
+   Thread.sleep(8000); 
   driver.quit();
 }
     
