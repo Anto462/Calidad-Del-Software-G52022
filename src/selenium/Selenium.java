@@ -37,7 +37,7 @@ public static void Menu(Login Login1, Trailer Trailer1, Lenguaje Leng1, Redes Re
             lectura = JOptionPane.showInputDialog("////- MENU DE PRUEBAS -//// \n"
                     + "1.  Prueba Login \n"
                     + "2.  Prueba trailer \n"
-                    + "3.  Prueba de cambio de lenguaje +++en desarollo \n"
+                    + "3.  Prueba de cambio de lenguaje \n"
                     + "4.  Prueba Redes sociales  \n"
                     + "5.  Prueba Logout  \n"
                     + "6.  Prueba Agregar producto +++en desarollo \n"
