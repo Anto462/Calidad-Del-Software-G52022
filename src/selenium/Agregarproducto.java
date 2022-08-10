@@ -40,14 +40,15 @@ driver.manage().window().maximize();
    driver.findElement(Collocator).click();
    driver.findElement(Agrelocator).click();
    
-//   driver.findElement(NameLocator).sendKeys("Hola");
-//   driver.findElement(PrecioLocator).sendKeys("1");
-//   driver.findElement(UnidadesLocator).sendKeys("2");
-//   driver.findElement(MarcaLocator).sendKeys("selenium");
-//   driver.findElement(DescLocator).sendKeys("Soy una prueba automatizada");
-//   driver.findElement(VideojuegoLocator).sendKeys("1");
-//   driver.findElement(ProductoLocator).sendKeys("1");
-//   driver.findElement(Savelocator).click();
+   Thread.sleep(8000); 
+   driver.findElement(NameLocator).sendKeys("Selenium");  
+   driver.findElement(PrecioLocator).sendKeys("1");
+   driver.findElement(UnidadesLocator).sendKeys("2");
+   driver.findElement(MarcaLocator).sendKeys("selenium");
+   driver.findElement(DescLocator).sendKeys("Soy una prueba automatizada");
+   driver.findElement(VideojuegoLocator).sendKeys("1");
+   driver.findElement(ProductoLocator).sendKeys("1");
+   driver.findElement(Savelocator).click();
 
    Thread.sleep(8000); 
   driver.quit();

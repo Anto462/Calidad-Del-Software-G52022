@@ -40,7 +40,7 @@ public static void Menu(Login Login1, Trailer Trailer1, Lenguaje Leng1, Redes Re
                     + "3.  Prueba de cambio de lenguaje \n"
                     + "4.  Prueba Redes sociales  \n"
                     + "5.  Prueba Logout  \n"
-                    + "6.  Prueba Agregar producto +++en desarollo \n"
+                    + "6.  Prueba Agregar producto  \n"
                     + "0. Salir");
             opcion = Integer.parseInt(lectura);
             switch (opcion) {
