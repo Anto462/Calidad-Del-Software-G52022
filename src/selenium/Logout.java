@@ -30,6 +30,9 @@ WebDriver driver = new ChromeDriver();
    driver.findElement(loginlocator).click();
    Thread.sleep(3000);
    driver.findElement(Logoutlocator).click();
+   if(driver.findElement(loginlocator).isDisplayed()){
+       System.out.println("Completada la prueba de logout con exito");
+   }
 
    Thread.sleep(8000); 
   driver.quit();

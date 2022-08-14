@@ -29,6 +29,11 @@ WebDriver driver = new ChromeDriver();
    driver.findElement(paswordlocator).sendKeys("123");
    driver.findElement(loginlocator).click();
    driver.findElement(trailerlocator).click();
+   Thread.sleep(4000);
+   driver.switchTo().window("");
+   if(driver.findElement(trailerlocator).isDisplayed()){
+       System.out.println("Completada la prueba se observa el trailer con exito");
+   }
 
    Thread.sleep(8000); 
   driver.quit();

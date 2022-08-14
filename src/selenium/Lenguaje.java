@@ -22,6 +22,9 @@ By loginlocator = By.name("login");
 By Logoutlocator = By.name("Logout");
 By lenglocatoren = By.id("Ingles");
 By lenglocatores = By.id("Espanol");
+By validaleng = By.xpath("/html/body/div[1]/h2");
+int espanol = 0;
+int ingles = 0;
 
 WebDriver driver = new ChromeDriver(); 
   driver.get("http://localhost:82/login");    
@@ -37,13 +40,24 @@ WebDriver driver = new ChromeDriver();
    driver.findElement(usernamelocator).sendKeys("alejandro");
    driver.findElement(paswordlocator).sendKeys("123");
    driver.findElement(loginlocator).click();
+    if(driver.findElement(validaleng).isDisplayed()){
+       System.out.println("Completada la prueba se observa en ingles con exito");
+       ingles = 1;
+   }
    Thread.sleep(3000);
    driver.findElement(Logoutlocator).click();
    driver.findElement(lenglocatores).click();
    driver.findElement(usernamelocator).sendKeys("alejandro");
    driver.findElement(paswordlocator).sendKeys("123");
    driver.findElement(loginlocator).click();
+   if(driver.findElement(validaleng).isDisplayed()){
+       System.out.println("Completada la prueba se observa en español con exito");
+       espanol = 1;
+   }
    
+   if(ingles == 1 && espanol==1){
+       System.out.println("Se observan con exito los lenguajes");
+   }
    Thread.sleep(8000); 
   driver.quit();
 } 

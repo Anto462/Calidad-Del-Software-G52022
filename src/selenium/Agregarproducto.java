@@ -49,6 +49,9 @@ driver.manage().window().maximize();
    driver.findElement(VideojuegoLocator).sendKeys("1");
    driver.findElement(ProductoLocator).sendKeys("1");
    driver.findElement(Savelocator).click();
+   if(driver.findElement(Agrelocator).isDisplayed()){
+       System.out.println("Completada la prueba de agregar producto con exito");
+   }
 
    Thread.sleep(8000); 
   driver.quit();
